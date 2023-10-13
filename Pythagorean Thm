@@ -1,0 +1,16 @@
+clc; clear;
+
+a = input('Enter side 1: ');
+b = input('Enter side 2: ');
+c = input('Enter side 3: ');
+
+
+if ((c^2 + b^2) == a^2);
+    fprintf('This triangle has a right angle!');
+elseif ((c^2 + a^2) == b^2);
+    fprintf('This triangle has a right angle!');
+elseif ((a^2 + b^2) == c^2);
+    fprintf('This triangle has a right angle!');
+else
+        fprintf('This triangle doesn''t have a right angle...');
+end 
