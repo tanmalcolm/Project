@@ -1,0 +1,22 @@
+clc; clear;
+
+fprintf('Available Currencies: A)USD B)CAD C)YEN \n');
+x = input('Enter transaction amount: ');
+y = input('Transaction currency: ', 's');
+z = input('Currency to convert to: ', 's');
+
+if y == 'A' && z == 'B'
+    fprintf('Converted value: %.2f CAD', 1.24*x);
+elseif y == 'A' && z == 'C'
+    fprintf('Converted value: %.2f YEN', 108.59*x);
+elseif y == 'B' && z == 'A'
+    fprintf('Converted value: %.2f USD', x/1.24);
+elseif y == 'B' && z == 'C'
+    fprintf('Converted value: %.2f YEN', ((x/1.24)*108.59));
+elseif y == 'C' && z == 'A'
+    fprintf('Converted value: %.2f USD', x/108.59);
+elseif y == 'C' && z == 'B'
+    fprintf('Converted value: %.2f CAD', ((x/108.59)*1.24));
+elseif y == z
+    fprintf('Conversion not needed...');
+end
